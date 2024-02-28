@@ -10,6 +10,9 @@
     font-weight: 800;
 }
 
+.standard-font {
+    font-family: Work Sans;
+}
 
 /********************************************* Header */
 
@@ -21,6 +24,8 @@
     background-size: auto 100px;
     height: 100px;
     width: auto;
+    left: 30px;
+    margin-bottom: 10px;
 }
 
 .bg-img {
@@ -68,4 +73,88 @@
     position: relative;
     top: 100px;
     left: 100px;
+    font-family: Work Sans;
+    font-size: 20px;
+}
+
+/********************************************* Main Section */
+
+.company-updates,
+.travel,
+.client,
+.finance,
+.personal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: #9c85db;
+    -o-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -ms-border-radius: 50px 0 50px 0;
+    border-radius: 50px 0 50px 0;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.quick-link-section {
+    position: relative;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.quick-links-heading {
+    background-color: #9c85db;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    -o-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -ms-border-radius: 50px 0 50px 0;
+    border-radius: 50px 0 50px 0;
+}
+
+.quick-links-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 630px;
+    width: 100%;
+    border: 5px solid #9c85db;
+    -o-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -ms-border-radius: 50px 0 50px 0;
+    border-radius: 50px 0 50px 0;
+}
+
+
+.company-updates h2,
+.travel h2,
+.client h2,
+.finance h2,
+.personal h2,
+.quick-links-heading h2 {
+    color: white;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.quick-links-border p {
+    position: absolute;
+    top: 40%;
+    color: #9c85db;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.quick-links-heading h2 {
+    position: absolute;
+    top: 27px;
+    left: 40px;
 }
