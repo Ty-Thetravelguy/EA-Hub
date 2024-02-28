@@ -299,3 +299,43 @@ body {
     justify-content: center;
     text-align: center;
 }
+
+.scrolling-updates {
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    background: #444a9f;
+    /* Or any color you prefer */
+    color: #fff;
+    /* Text color */
+    height: 50px;
+    /* Adjust this value to make the bar thicker */
+    line-height: 50px;
+}
+
+.scrolling-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-left 40s linear infinite;
+    -webkit-animation: scroll-left 40s linear infinite;
+}
+
+.scrolling-content span {
+    margin-right: 50px;
+    /* Space between updates */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.main {
+    padding-bottom: 3rem;
+}
