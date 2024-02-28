@@ -95,7 +95,48 @@ body {
 
 /********************************************* Main Section */
 
-.company-updates,
+.carousel-inner {
+    padding: 0 100px 0 350px;
+}
+
+.carousel-item {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    justify-content: center;
+    text-align: center;
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 150px;
+    height: 150px;
+}
+
+.company-updates {
+    height: 200px;
+    width: 100%;
+    background-color: #9c85db;
+    -o-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -ms-border-radius: 50px 0 50px 0;
+    border-radius: 50px 0 50px 0;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.company-updates h2 {
+    position: absolute;
+    top: 60px;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* .company-updates, */
 .travel,
 .client,
 .finance,
@@ -150,8 +191,6 @@ body {
     border-radius: 50px 0 50px 0;
 }
 
-
-.company-updates h2,
 .travel h2,
 .client h2,
 .finance h2,
