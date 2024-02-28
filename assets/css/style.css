@@ -1,8 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 /********************************************* General */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 .bg-color-blue {
     background-color: #444a9f;
+}
+
+.bg-color-purple {
+    background-color: #9c85db;
 }
 
 .heading-font {
@@ -96,13 +112,14 @@
     -ms-border-radius: 50px 0 50px 0;
     border-radius: 50px 0 50px 0;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .quick-link-section {
     position: relative;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 40px;
 }
 
 .quick-links-heading {
@@ -157,4 +174,89 @@
     position: absolute;
     top: 27px;
     left: 40px;
+}
+
+.bottom-border {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 5px solid #9c85db;
+    width: 97%;
+    /* Example: Adjust this percentage to control the width */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-posts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: white;
+    border: 5px solid #9c85db;
+    -o-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -ms-border-radius: 50px 0 50px 0;
+    border-radius: 50px 0 50px 0;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.social-posts h3,
+.cal-meet-wig h3,
+.time-tastic h3,
+.comp-directory h3,
+.external-links h3 {
+    color: #9c85db;
+}
+
+.shoutout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 80%;
+    background-color: white;
+    border: 5px solid #9c85db;
+    -o-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -ms-border-radius: 50px 0 50px 0;
+    border-radius: 50px 0 50px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 65px;
+}
+
+.shoutout h3 {
+    color: #9c85db;
+}
+
+.cal-meet-wig,
+.time-tastic,
+.comp-directory,
+.external-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 270px;
+    width: 80%;
+    background-color: white;
+    border: 5px solid #9c85db;
+    -o-border-radius: 50px 0 50px 0;
+    -webkit-border-radius: 50px 0 50px 0;
+    -moz-border-radius: 50px 0 50px 0;
+    -ms-border-radius: 50px 0 50px 0;
+    border-radius: 50px 0 50px 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 65px;
+}
+
+.cal-meet-wig h3 {
+    justify-content: center;
+    text-align: center;
 }
