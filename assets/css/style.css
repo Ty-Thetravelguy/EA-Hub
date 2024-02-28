@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/********************************************* General */
+.bg-color-blue {
+    background-color: #444a9f;
+}
+
+.heading-font {
+    font-family: Playfair Display;
+    font-weight: 800;
+}
+
+
+/********************************************* Header */
+
+.logo-img {
+    background: url('../images/EA-White-Master-Logo-v2-200px.png');
+    position: relative;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: auto 100px;
+    height: 100px;
+    width: auto;
+}
+
+.bg-img {
+    border-top: 3px solid white;
+    background: url('../images/bg-img-v1.jpg');
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47vh;
+    margin: 0;
+}
+
+.bg-img::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to left, #ffffff00 20%, #444a9f 100%);
+}
+
+.welcome-section {
+    padding: 0;
+}
+
+.welcome-name {
+    color: white;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    font-size: 75px;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 1);
+}
+
+.search-textbox {
+    margin: 20px 0 20px 0;
+    padding: 10px 150px;
+    -o-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
