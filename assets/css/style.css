@@ -37,15 +37,7 @@ body {
 /********************************************* Header */
 
 .logo-img {
-    background: url('../images/EA-White-Master-Logo-v2-200px.png');
-    position: relative;
-    background-position: left;
-    background-repeat: no-repeat;
-    background-size: auto 100px;
-    height: 100px;
-    width: auto;
-    left: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .bg-img {
@@ -146,9 +138,8 @@ body {
     -ms-border-radius: 50px 0 50px 0;
     border-radius: 50px 0 50px 0;
     margin-top: 15px;
-
+    transition: transform 0.3s ease;
 }
-
 
 .travel h2,
 .client h2,
@@ -158,6 +149,25 @@ body {
     color: white;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
 }
+
+.travel-link,
+.client-link,
+.finance-link,
+.personal-link {
+    text-decoration: none;
+}
+
+.travel:hover,
+.client:hover,
+.finance:hover,
+.personal:hover {
+    -o-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
 
 .quick-link-section {
     display: flex;
