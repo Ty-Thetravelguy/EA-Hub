@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
 }
 
+.main-section {
+    margin-bottom: 5px;
+}
+
 .bg-color-blue {
     background-color: #444a9f;
 }
@@ -95,48 +99,37 @@ body {
 
 /********************************************* Main Section */
 
-.carousel-inner {
-    padding: 0 100px 0 350px;
-}
-
-.carousel-item {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    justify-content: center;
-    text-align: center;
-}
-
-.carousel-indicators {
-    position: absolute;
-    top: 150px;
-    height: 150px;
-}
-
 .company-updates {
-    height: 200px;
-    width: 100%;
     background-color: #9c85db;
+    height: 200px;
+    padding: 65px;
     -o-border-radius: 50px 0 50px 0;
     -webkit-border-radius: 50px 0 50px 0;
     -moz-border-radius: 50px 0 50px 0;
     -ms-border-radius: 50px 0 50px 0;
     border-radius: 50px 0 50px 0;
     margin-top: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
 }
 
 .company-updates h2 {
-    position: absolute;
-    top: 60px;
-    justify-content: center;
-    text-align: center;
     color: white;
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* .company-updates, */
+.carousel-item {
+    justify-content: center;
+    text-align: center;
+}
+
+.slide {
+    height: 150px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    padding-bottom: 90px;
+}
+
 .travel,
 .client,
 .finance,
@@ -153,43 +146,9 @@ body {
     -ms-border-radius: 50px 0 50px 0;
     border-radius: 50px 0 50px 0;
     margin-top: 15px;
-    margin-left: 20px;
-    margin-right: 20px;
+
 }
 
-.quick-link-section {
-    position: relative;
-    margin-top: 15px;
-    margin-left: 40px;
-}
-
-.quick-links-heading {
-    background-color: #9c85db;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100px;
-    width: 100%;
-    -o-border-radius: 50px 0 50px 0;
-    -webkit-border-radius: 50px 0 50px 0;
-    -moz-border-radius: 50px 0 50px 0;
-    -ms-border-radius: 50px 0 50px 0;
-    border-radius: 50px 0 50px 0;
-}
-
-.quick-links-border {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 630px;
-    width: 100%;
-    border: 5px solid #9c85db;
-    -o-border-radius: 50px 0 50px 0;
-    -webkit-border-radius: 50px 0 50px 0;
-    -moz-border-radius: 50px 0 50px 0;
-    -ms-border-radius: 50px 0 50px 0;
-    border-radius: 50px 0 50px 0;
-}
 
 .travel h2,
 .client h2,
@@ -200,19 +159,49 @@ body {
     text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
 }
 
-.quick-links-border p {
-    position: absolute;
-    top: 40%;
-    color: #9c85db;
-    font-size: 30px;
-    text-align: center;
-    font-weight: 600;
+.quick-link-section {
+    display: flex;
+    flex-direction: column;
+    /* Stacks children vertically */
+    justify-content: center;
+    /* Centers content vertically within the container */
+    align-items: center;
+    /* Centers content horizontally, if needed */
+    height: 627px;
+    width: 100%;
+    background-color: white;
+    border: 5px solid #9c85db;
+    border-radius: 50px 0 50px 0;
+    margin-top: 15px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-.quick-links-heading h2 {
-    position: absolute;
-    top: 27px;
-    left: 40px;
+.quick-links-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: #9c85db;
+    -o-border-radius: 40px 0 40px;
+    -webkit-border-radius: 40px 0 40px;
+    -moz-border-radius: 40px 0 40px;
+    -ms-border-radius: 40px 0 40px;
+    border-radius: 40px 0 40px;
+}
+
+.quick-links-content {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center content */
+    align-items: center;
+    /* Vertically center content */
+    height: 100%;
+    /* Take up available space, adjust as needed */
+    width: 100%;
+    text-align: center;
+    /* Center text for inline or inline-block elements */
 }
 
 .bottom-border {
@@ -252,6 +241,10 @@ body {
     color: #9c85db;
 }
 
+.shoutout-section {
+    margin-left: .4px;
+}
+
 .shoutout {
     display: flex;
     justify-content: center;
@@ -268,6 +261,7 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 65px;
+
 }
 
 .shoutout h3 {
@@ -306,24 +300,39 @@ body {
     position: fixed;
     bottom: 0;
     background: #444a9f;
-    /* Or any color you prefer */
     color: #fff;
-    /* Text color */
     height: 50px;
-    /* Adjust this value to make the bar thicker */
     line-height: 50px;
 }
 
 .scrolling-content {
-    display: flex;
+    display: inline-flex;
+    align-items: flex-start;
     white-space: nowrap;
-    animation: scroll-left 40s linear infinite;
     -webkit-animation: scroll-left 40s linear infinite;
+    animation: scroll-left 40s linear infinite;
 }
 
 .scrolling-content span {
     margin-right: 50px;
-    /* Space between updates */
+}
+
+.scrolling-content a {
+    color: #fff;
+}
+
+.scrolling-content a:hover {
+    color: #ccc;
+}
+
+.scrolling-news {
+    font-size: 25px;
+    padding-top: 7px;
+}
+
+.news-border {
+    border-left: 3px solid white;
+    padding-left: 50px;
 }
 
 @keyframes scroll-left {
