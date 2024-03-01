@@ -38,6 +38,16 @@ body {
 
 .logo-img {
     margin-bottom: 8px;
+    -o-transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.1);
+    /* Adjust scale value as needed */
 }
 
 .bg-img {
@@ -89,7 +99,7 @@ body {
     font-size: 20px;
 }
 
-/********************************************* Main Section */
+/**************************** Div Styling */
 
 .company-updates {
     background-color: #9c85db;
@@ -101,25 +111,6 @@ body {
     -ms-border-radius: 50px 0 50px 0;
     border-radius: 50px 0 50px 0;
     margin-top: 15px;
-}
-
-.company-updates h2 {
-    color: white;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
-}
-
-.carousel-item {
-    justify-content: center;
-    text-align: center;
-}
-
-.slide {
-    height: 150px;
-}
-
-.carousel-control-next,
-.carousel-control-prev {
-    padding-bottom: 90px;
 }
 
 .travel,
@@ -138,16 +129,11 @@ body {
     -ms-border-radius: 50px 0 50px 0;
     border-radius: 50px 0 50px 0;
     margin-top: 15px;
-    transition: transform 0.3s ease;
-}
-
-.travel h2,
-.client h2,
-.finance h2,
-.personal h2,
-.quick-links-heading h2 {
-    color: white;
-    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+    -o-transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
 }
 
 .travel-link,
@@ -167,7 +153,6 @@ body {
     -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
-
 
 .quick-link-section {
     display: flex;
@@ -198,16 +183,6 @@ body {
     border-radius: 40px 0 40px;
 }
 
-.quick-links-heading h3 {
-    margin: 0;
-    /* Removes default margin */
-    width: auto;
-    /* Ensures the element doesn't stretch */
-    text-align: center;
-    /* Center text just in case */
-}
-
-
 .quick-links-content {
     display: flex;
     justify-content: center;
@@ -215,22 +190,6 @@ body {
     height: 100%;
     width: 100%;
     text-align: center;
-}
-
-.quick-links-content p {
-    color: #9c85db;
-    font-size: 30px;
-    font-weight: 600;
-}
-
-.bottom-border {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-bottom: 5px solid #9c85db;
-    width: 97%;
-    /* Example: Adjust this percentage to control the width */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .social-posts {
@@ -252,18 +211,6 @@ body {
     margin-bottom: 20px;
 }
 
-.social-posts h3,
-.cal-meet-wig h3,
-.time-tastic h3,
-.comp-directory h3,
-.external-links h3 {
-    color: #9c85db;
-}
-
-.shoutout-section {
-    margin-left: .4px;
-}
-
 .shoutout {
     display: flex;
     justify-content: center;
@@ -281,10 +228,6 @@ body {
     margin-bottom: 20px;
     margin-left: 65px;
 
-}
-
-.shoutout h3 {
-    color: #9c85db;
 }
 
 .cal-meet-wig,
@@ -307,15 +250,190 @@ body {
     margin-bottom: 20px;
 }
 
+.bottom-border {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-bottom: 5px solid #9c85db;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**************************** Fonts */
+
+.company-updates h2,
+.travel h2,
+.client h2,
+.finance h2,
+.personal h2,
+.quick-links-heading h2 {
+    color: white;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+
+}
+
+.quick-links-heading h3 {
+    margin: 0;
+    width: auto;
+    text-align: center;
+}
+
+.quick-links-content p {
+    color: #9c85db;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.social-posts h3,
+.cal-meet-wig h3,
+.time-tastic h3,
+.comp-directory h3,
+.external-links h3 {
+    color: #9c85db;
+    font-size: 30px;
+}
+
+.shoutout h3 {
+    color: #9c85db;
+}
+
 .cal-meet-wig h3,
 .time-tastic h3,
 .comp-directory h3,
 .external-links h3 {
     text-align: center;
-    /* Centers text horizontally */
-    /* No need for justify-content here */
 }
 
+.external-links p {
+    font-family: Work Sans;
+    font-size: 17px;
+}
+
+
+/**************************** Company Updates */
+
+.carousel-item {
+    justify-content: center;
+    text-align: center;
+}
+
+.slide {
+    height: 150px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    padding-bottom: 90px;
+}
+
+/**************************** Travel */
+
+.travel-section {
+    margin-bottom: 54px;
+}
+
+.travel-section-btn {
+    height: 300px;
+    width: 300px;
+    border: 3px solid #fff;
+    justify-content: center;
+    text-align: center;
+    margin: 20px;
+    font-size: 100px;
+    color: #fff;
+    justify-content: center;
+    text-shadow: 2px 2px 4px #000000;
+    -o-transition: font-size 0.3s ease, color 0.5s ease;
+    -webkit-transition: font-size 0.3s ease, color 0.5s ease;
+    -moz-transition: font-size 0.3s ease, color 0.5s ease;
+    -ms-transition: font-size 0.3s ease, color 0.5s ease;
+    transition: font-size 0.3s ease, color 0.5s ease;
+}
+
+.travel-section-btn:hover {
+    color: #444a9f;
+    border: #fff;
+    background-color: #fff;
+    font-size: 150px;
+}
+
+.travel-section-btn h4 {
+    padding-top: 20px;
+    font-family: Playfair Display;
+    font-size: 30px;
+}
+
+.travel-section-btn div {
+    padding-top: 55px;
+}
+
+/**************************** Client */
+
+
+
+
+/**************************** Finance */
+
+
+
+
+/**************************** Personal */
+
+
+
+
+/**************************** Socials */
+
+
+
+
+/**************************** Shout */
+
+.shoutout-section {
+    margin-left: .4px;
+}
+
+
+/**************************** Calendar/Meetings */
+
+
+
+
+/**************************** Timetastic */
+
+
+
+
+/**************************** Company Directory */
+
+
+
+
+/**************************** External links */
+
+
+
+.external-links p a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #9c85db;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.external-links p a:hover {
+    font-weight: 600;
+    text-decoration: none;
+    color: #007F8C;
+    font-size: 20px;
+}
+
+.external-links h3 {
+    margin-bottom: 20px;
+}
+
+
+/**************************** Scrolling Travel News */
 
 .scrolling-updates {
     width: 100%;
