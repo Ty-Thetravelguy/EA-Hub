@@ -61,6 +61,30 @@ body {
     margin: 0;
 }
 
+.bg-img-finance {
+    border-top: 3px solid white;
+    background: url('../images/bg-img-finance-v2.jpg');
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47vh;
+    margin: 0;
+}
+
+.bg-img-refund-form {
+    border-top: 3px solid white;
+    background: url('../images/bg-img-refund-form-v2.jpg');
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 47vh;
+    margin: 0;
+}
+
+.bg-img-refund-form::before,
+.bg-img-finance::before,
 .bg-img::before {
     content: '';
     position: absolute;
@@ -70,6 +94,9 @@ body {
     bottom: 0;
     background: linear-gradient(to left, #ffffff00 20%, #444a9f 100%);
 }
+
+
+
 
 .welcome-section {
     padding: 0;
@@ -327,12 +354,14 @@ body {
     padding-bottom: 90px;
 }
 
-/**************************** Travel */
+/**************************** Travel & Finance */
 
+.finance-section,
 .travel-section {
     margin-bottom: 54px;
 }
 
+.fin-refund-btn,
 .travel-section-btn {
     height: 300px;
     width: 300px;
@@ -344,13 +373,14 @@ body {
     color: #fff;
     justify-content: center;
     text-shadow: 2px 2px 4px #000000;
-    -o-transition: font-size 0.3s ease, color 0.5s ease;
-    -webkit-transition: font-size 0.3s ease, color 0.5s ease;
-    -moz-transition: font-size 0.3s ease, color 0.5s ease;
-    -ms-transition: font-size 0.3s ease, color 0.5s ease;
-    transition: font-size 0.3s ease, color 0.5s ease;
+    -o-transition: font-size 0.5s ease, color 0.5s ease;
+    -webkit-transition: font-size 0.5s ease, color 0.5s ease;
+    -moz-transition: font-size 0.5s ease, color 0.5s ease;
+    -ms-transition: font-size 0.5s ease, color 0.5s ease;
+    transition: font-size 0.5s ease, color 0.5s ease;
 }
 
+.fin-refund-btn:hover,
 .travel-section-btn:hover {
     color: #444a9f;
     border: #fff;
@@ -358,12 +388,14 @@ body {
     font-size: 150px;
 }
 
+.fin-refund-btn h4,
 .travel-section-btn h4 {
     padding-top: 20px;
     font-family: Playfair Display;
     font-size: 30px;
 }
 
+.fin-refund-btn div,
 .travel-section-btn div {
     padding-top: 65px;
 }
@@ -374,7 +406,6 @@ body {
 
 
 /**************************** Finance */
-
 
 
 

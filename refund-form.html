@@ -10,7 +10,7 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/39153677d4.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>EA Hub</title>
+    <title>EA Refund Form</title>
 </head>
 
 <body>
@@ -25,22 +25,60 @@
             </div>
             <div class="row">
                 <div class="col welcome-section">
-                    <div class="bg-img-finance">
-                        <h1 class="welcome-name heading-font">Welcome to all <br>things Finance!</h1>
+                    <div class="bg-img-refund-form">
+                        <h1 class="welcome-name heading-font">Refund Form!</h1>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="main-section">
+    <section class="refund-form-section">
         <div class="container-fluid bg-color-purple">
-            <div class="row finance-section justify-content-center">
-                <a class="col-2 fin-refund-btn" href="refund-form.html">
-                    <div class="fa-solid fa-file-invoice">
-                        <h4>Refund Form</h4>
-                    </div>
-                </a>
+            <div class="row refund-form justify-content-center">
+                <div class="col-12">
+                    <form id="refundForm">
+                        <div>
+                            <label for="consultFirstName">Consultant's First Name: </label>
+                            <input type="text" id="consultFirstName" placeholder="First Name" required>
+                        </div>
+                        <div>
+                            <label for="consultSurname">Consultant's Surname: </label>
+                            <input type="text" id="consultSurname" placeholder="Last Name" required>
+                        </div>
+                        <div>
+                            <label for="consultantEmail">Consultant Email: </label>
+                            <input type="email" id="consultantEmail" required>
+                        </div>
+                        <div>
+                            <label for="travellerName">Name of Traveller: </label>
+                            <input type="text" id="travellerName" required>
+                        </div>
+
+                        <div>
+                            <label for="travelTypeRefund">Select refund type: </label>
+                            <select id="travelTypeRefund" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="Flight">Flight</option>
+                                <option value="Accommodation">Accommodation</option>
+                                <option value="Car Hire & Taxi">Car Hire & Taxi</option>
+                                <option value="Rail">Rail</option>
+                                <option value="Ancillary">Ancillary</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="dateOfTravel">Date of Travel: </label>
+                            <input type="date" id="dateOfTravel" required>
+                        </div>
+                        <div id="refundType"></div>
+                        <div id="supplier"></div>
+                        <div id="domOrIntRail"></div>
+                        <div id="additionalFields"></div>
+                        <div>
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -69,6 +107,7 @@
             </div>
         </div>
     </section>
+    <script src="assets/js/script.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
