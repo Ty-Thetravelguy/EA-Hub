@@ -1,16 +1,25 @@
-var consultantFirstName;
-var consultantSurname;
+var consultFirstName;
+var consultSurname;
 var consultantEmail;
 var travellerName;
-var travelTypeRefund;
 var dateOfTravel;
+var travelTypeRefund;
 var refundTypeAir;
 var refundDomOrIntRail;
+var railRefundType;
 var reasonForVoidAir;
 var reasonForRefundAir;
 var reasonForRefund;
+var supplierAir;
+var supplierAccom;
+var supplierCarTaxi;
+var supplierDomRail;
+var supplierintRail;
+var supplierAnc;
 var flightNDC;
-var bookedThrough;
+var bookingSystem;
+var processedAutomatically;
+
 var supplier;
 var referrence
 var airTicketNo;
@@ -23,6 +32,7 @@ var anyThingElseToKnow;
 
 document.getElementById('travelTypeRefund').addEventListener('change', function () {
     const refundTypeField = document.getElementById('refundTypeAir');
+    const flightNdcQuestion = document.getElementById('flightNDC')
     const domOrIntRailField = document.getElementById('refundDomOrIntRail');
     const reasonForRefundField = document.getElementById('reasonForRefund');
     const supplierAccomField = document.getElementById('supplierAccom');
@@ -30,6 +40,7 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
     const supplierAncField = document.getElementById('supplierAnc');
 
     refundTypeField.innerHTML = '';
+    flightNdcQuestion.innerHTML = '';
     domOrIntRailField.innerHTML = '';
     reasonForRefundField.innerHTML = '';
     supplierAccomField.innerHTML = '';
@@ -85,6 +96,58 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
                 }
             });
         }, 0);
+
+        flightNdcQuestion.innerHTML = `
+            <div class="form-group">
+                <label for="flightNDCSelect">Is this an NDC flight?:</label>
+                <select class="form-control" id="flightNDCSelect" required>
+                    <option value="" selected disabled>Please Select</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+        `;
+
+        // Correct the timing and target element ID for attaching the event listener
+        setTimeout(() => {
+            document.getElementById('flightNDCSelect').addEventListener('change', function () {
+                const bookingSystemQuestion = document.getElementById('bookingSystem');
+                const processedAutomaticallyQuestion = document.getElementById('processedAutomatically'); // Get the target div for the new question
+
+                if (this.value === 'Yes') {
+                    bookingSystemQuestion.innerHTML = `
+                        <div class="form-group">
+                            <label for="bookingSystemSelect">Was this booked in Atriis or Amadeus?:</label>
+                            <select class="form-control" id="bookingSystemSelect" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="Atriis">Atriis</option>
+                                <option value="Amadeus">Amadeus</option>
+                            </select>
+                        </div>
+                    `;
+
+                    // Wait for the booking system question to be answered before displaying the next question
+                    document.getElementById('bookingSystemSelect').addEventListener('change', function () {
+                        processedAutomaticallyQuestion.innerHTML = `
+                            <div class="form-group">
+                                <label for="processedAutomaticallySelect">Was the refund/void processed automatically?</label>
+                                <select class="form-control" id="processedAutomaticallySelect" required>
+                                    <option value="" selected disabled>Please Select</option>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                </select>
+                            </div>
+                        `;
+                    });
+                } else {
+                    bookingSystemQuestion.innerHTML = ''; // Clear the content if 'No' is selected for NDC
+                    processedAutomaticallyQuestion.innerHTML = ''; // Also clear this question since it's dependent on the NDC selection
+                }
+            });
+        }, 0);
+
+
+
     } else if (this.value === 'Accommodation') {
         reasonForRefundField.innerHTML = `
             <div>
