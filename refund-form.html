@@ -36,28 +36,30 @@
     <section class="refund-form-section">
         <div class="container-fluid bg-color-purple">
             <div class="row refund-form justify-content-center">
-                <div class="col-12">
+                <div class="col-4">
                     <form id="refundForm">
                         <div>
-                            <label for="consultFirstName">Consultant's First Name: </label>
-                            <input type="text" id="consultFirstName" placeholder="First Name" required>
+                            <label class="form-group" for="consultFirstName">Consultant's First Name: </label>
+                            <input class="form-control" type="text" id="consultFirstName" placeholder="First Name"
+                                required>
                         </div>
                         <div>
-                            <label for="consultSurname">Consultant's Surname: </label>
-                            <input type="text" id="consultSurname" placeholder="Last Name" required>
+                            <label class="form-group" for="consultSurname">Consultant's Surname: </label>
+                            <input class="form-control" type="text" id="consultSurname" placeholder="Last Name"
+                                required>
                         </div>
                         <div>
-                            <label for="consultantEmail">Consultant Email: </label>
-                            <input type="email" id="consultantEmail" required>
+                            <label class="form-group" for="consultantEmail">Consultant Email: </label>
+                            <input class="form-control" type="email" id="consultantEmail" required>
                         </div>
                         <div>
-                            <label for="travellerName">Name of Traveller: </label>
-                            <input type="text" id="travellerName" required>
+                            <label class="form-group" for="travellerName">Name of Traveller: </label>
+                            <input class="form-control" type="text" id="travellerName" required>
                         </div>
 
                         <div>
-                            <label for="travelTypeRefund">Select refund type: </label>
-                            <select id="travelTypeRefund" required>
+                            <label class="form-group" for="travelTypeRefund">Select Travel Type Refund: </label>
+                            <select class="form-control" id="travelTypeRefund" required>
                                 <option value="" selected disabled>Please Select</option>
                                 <option value="Flight">Flight</option>
                                 <option value="Accommodation">Accommodation</option>
@@ -67,13 +69,21 @@
                             </select>
                         </div>
                         <div>
-                            <label for="dateOfTravel">Date of Travel: </label>
-                            <input type="date" id="dateOfTravel" required>
+                            <label class="form-group" for="dateOfTravel">Date of Travel: </label>
+                            <input class="form-control" type="date" id="dateOfTravel" required>
                         </div>
-                        <div id="refundType"></div>
-                        <div id="supplier"></div>
-                        <div id="domOrIntRail"></div>
-                        <div id="additionalFields"></div>
+                        <div id="refundTypeAir"></div>
+                        <div id="refundDomOrIntRail"></div>
+                        <div id="railRefundType"></div>
+                        <div id="reasonForVoidAir"></div>
+                        <div id="reasonForRefundAir"></div>
+                        <div id="reasonForRefund"></div>
+                        <div id="supplierAir"></div>
+                        <div id="supplierAccom"></div>
+                        <div id="supplierCarTaxi"></div>
+                        <div id="supplierDomRail"></div>
+                        <div id="supplierintRail"></div>
+                        <div id="supplierAnc"></div>
                         <div>
                             <input type="submit" value="Submit">
                         </div>
