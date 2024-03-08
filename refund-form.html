@@ -66,19 +66,138 @@
                             <label class="form-group" for="travelTypeRefund">Select Travel Type Refund: </label>
                             <select class="form-control" id="travelTypeRefund" required>
                                 <option value="" selected disabled>Please Select</option>
-                                <option value="Flight">Flight</option>
-                                <option value="Accommodation">Accommodation</option>
-                                <option value="Car Hire & Taxi">Car Hire & Taxi</option>
-                                <option value="Rail">Rail</option>
-                                <option value="Ancillary">Ancillary</option>
+                                <option value="flight">Flight</option>
+                                <option value="accommodation">Accommodation</option>
+                                <option value="car hire & taxi">Car Hire & Taxi</option>
+                                <option value="rail">Rail</option>
+                                <option value="ancillary">Ancillary</option>
                             </select>
                         </div>
 
-                        <div id="refundTypeAir"></div>
+                        <div>
+                            <label class="form-group" for="flightRefundType">Select refund type for Flight:</label>
+                            <select class="form-control" id="flightRefundType" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="Void">Void</option>
+                                <option value="Full">Full</option>
+                                <option value="Partial">Partial</option>
+                                <option value="Tax only">Tax only</option>
+                            </select>
+                        </div>
+
+                        <div id="reasonForVoidAirDiv" style="display: none;">
+                            <label class="form-group" for="reasonForVoidAir">Reason for Void:</label>
+                            <select class="form-control" id="reasonForVoidAir" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="Agent Error">Agent Error</option>
+                                <option value="Client Error">Client Error</option>
+                                <option value="Agent request – Higher profit booking">Agent request – Higher profit
+                                    booking</option>
+                            </select>
+                        </div>
+
+                        <div id="reasonForRefundAirDiv" style="display: none;">
+                            <label class="form-group" for="reasonForRefundAir">Reason for Refund:</label>
+                            <select class="form-control" id="reasonForRefundAir" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="Client's request - Change of plans">Client's request - Change of plans
+                                </option>
+                                <option value="Agent Error">Agent Error</option>
+                                <option value="Involuntary Change">Involuntary Change</option>
+                                <option value="Official government travel advice">Official government travel advice
+                                </option>
+                                <option value="Supplier issue">Supplier issue</option>
+                            </select>
+                        </div>
+
+                        <div id="flightNDCDiv" style="display: none;">
+                            <label class="form-group" for="flightNDC">Is this an NDC flight?:</label>
+                            <select class="form-control" id="flightNDC" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+
+                        <div id="bookingSystemDiv" style="display: none;">
+                            <label class="form-group" for="bookingSystemSelect">Was this booked in Atriis or
+                                Amadeus?:</label>
+                            <select class="form-control" id="bookingSystemSelect" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="Atriis">Atriis</option>
+                                <option value="Amadeus">Amadeus</option>
+                            </select>
+                        </div>
+
+                        <div id="processedAutomaticallyDiv" style="display: none;">
+                            <label class="form-group" for="processedAutomaticallySelect">Was the refund/void processed
+                                automatically?</label>
+                            <select class="form-control" id="processedAutomaticallySelect" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="yes">Yes or Yes the airline has processed it</option>
+                                <option value="no">No, we still need to process it</option>
+                            </select>
+                        </div>
+
+                        <div id="airSupplierDiv" style="display: none;">
+                            <label class="form-group" for="airSupplierSelect">Select Supplier:</label>
+                            <select class="form-control" id="airSupplierSelect" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="BSP">BSP - Issued in our GDS</option>
+                                <option value="eGlobal">eGlobal</option>
+                                <option value="Mainstreet">Mainstreet</option>
+                                <option value="Brightsun">Brightsun</option>
+                                <option value="Fare Mine">Fare Mine</option>
+                                <option value="Travelfusion">Travelfusion</option>
+                                <option value="Airline Website">Airline Website</option>
+                            </select>
+                        </div>
+
+
+                        <div id="airRefundData" style="display: none;">
+                            <label class="form-group" for="airSupplierRef"></label>
+                            <input class="form-control" type="text" id="airSupplierRef"
+                                placeholder="Supplier Reference." required>
+
+                            <label class="form-group" for="airTicketno">Ticket number/s</label>
+                            <input class="form-control" type="text" id="airTicketNo"
+                                placeholder="Enter all the ticket number which require refunding." required>
+
+                            <label class="form-group" for="airTicketno">Ticket number/s</label>
+                            <input class="form-control" type="text" id="airTicketNo"
+                                placeholder="Enter all the ticket number which require refunding." required>
+
+                            <label class="form-group" for="localCurrenyRefundAmount">Local currency refund
+                                amount:</label>
+                            <input class="form-control" type="text" id="localCurrenyRefundAmount"
+                                placeholder="Enter if known.">
+
+                            <label class="form-group" for="refundAmountGBP">Refund amount due to EA in GBP</label>
+                            <input class="form-control" type="text" id="refundAmountGBP"
+                                placeholder="Enter the amount we will be receving in GBP." required>
+
+                            <label class="form-group" for="refundBackToClient">Is the refund going back to the
+                                client?</label>
+                            <input type="radio" id="refundBackToClientYes" name="refundBackToClient" required>
+                            <label for="refundBackToClientYes">Yes</label>
+                            <input type="radio" id="refundBackToClientNo" name="refundBackToClient" required>
+                            <label for="refundBackToClientNo">No</label>
+
+                            <label class="form-group" for="refundBackToClient">Do you require your markup to be
+                                refunded</label>
+                            <input type="radio" id="markUpBackToClientYes" name="markUpBackToClient" required>
+                            <label for="markUpBackToClientYes">Yes</label>
+                            <input type="radio" id="markUpBackToClientNo" name="markUpBackToClient" required>
+                            <label for="markUpBackToClientNo">No</label>
+
+
+                        </div>
+
+
+
                         <div id="refundDomOrIntRail"></div>
                         <div id="railRefundType"></div>
-                        <div id="reasonForVoidAir"></div>
-                        <div id="reasonForRefundAir"></div>
+
                         <div id="reasonForRefund"></div>
                         <div id="supplierAccom"></div>
                         <div id="supplierCarTaxi"></div>
@@ -88,7 +207,7 @@
                         <div id="flightNDC"></div>
                         <div id="bookingSystem"></div>
                         <div id="processedAutomatically"></div>
-                        <div id="supplierAir"></div>
+                        <div id="airSupplier"></div>
 
 
                         <div>
@@ -124,7 +243,7 @@
             </div>
         </div>
     </section>
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/refundForm.js"></script>
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
