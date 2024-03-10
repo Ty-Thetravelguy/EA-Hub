@@ -34,6 +34,7 @@ body {
     font-family: Work Sans;
 }
 
+
 /********************************************* Header */
 
 .logo-img {
@@ -409,6 +410,11 @@ body {
 
 .refund-form {
     height: 100rem;
+}
+
+#refundForm label {
+    font-family: Work Sans;
+    color: #000000;
 }
 
 /**************************** Personal */

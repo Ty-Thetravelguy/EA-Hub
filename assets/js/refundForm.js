@@ -133,9 +133,11 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
                         </select>
                     </div>
                     `;
+
+                document.getElementById('processedAutomatically').addEventListener('change', airRefundDataInput);
             });
 
-            document.getElementById('processedAutomatically').addEventListener('change', airRefundDataInput);
+
         };
 
         function flightNDCSectionQuestionNo() {
@@ -197,8 +199,8 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
             <textarea class="form-control" name="airNeedToKnow" id="airNeedToKnow" cols="80" rows="10" placeholder="Waiver codes, details of the flight which has been cancelled by the airlines for which you need a refund, or the amount you want to keep but are still giving your client something back"></textarea>
         </div>
         <div>
-                            <input type="submit" value="Submit">
-                        </div>`;
+            <input type="submit" value="Submit">
+        </div>`;
         };
 
 
