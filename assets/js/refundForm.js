@@ -12,6 +12,7 @@ var flightNDCSection;
 var bookingSystem;
 var processedAutomatically;
 var airSupplier;
+var airSupplierRef;
 var airTicketNo;
 var localCurrenyRefundAmount;
 var refundAmountGBP;
@@ -79,7 +80,7 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
         });
 
         function flightNDCSectionQuestion() {
-
+            console.log("flightNDCSectionQuestion called");
             document.getElementById('flightNDCSection').innerHTML = `
             <div >
                 <label class="form-group" for="flightNDC">Is this an NDC flight?</label>
@@ -92,7 +93,16 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
             `;
 
             document.getElementById('flightNDC').addEventListener('change', function () {
+                const bookingSystemSection = document.getElementById('bookingSystemSection');
+                const processedAutomaticallySection = document.getElementById('processedAutomaticallySection');
+                const airSupplierSection = document.getElementById('airSupplierSection');
+
+                bookingSystemSection.innerHTML = '';
+                processedAutomaticallySection.innerHTML = '';
+                airSupplierSection.innerHTML = '';
+
                 if (this.value === 'Yes') {
+
                     flightNDCSectionQuestionYes()
                 } else {
                     flightNDCSectionQuestionNo()
@@ -101,12 +111,6 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
         };
 
         function flightNDCSectionQuestionYes() {
-            const bookingSystemSection = document.getElementById('bookingSystemSection');
-            const processedAutomaticallySection = document.getElementById('processedAutomaticallySection');
-
-            bookingSystemSection.innerHTML = '';
-            processedAutomaticallySection.innerHTML = '';
-
             bookingSystemSection.innerHTML = `
                 <div >
                     <label class="form-group" for="bookingSystem">Was this booked in Amadeus or Atriis?</label>
@@ -130,24 +134,72 @@ document.getElementById('travelTypeRefund').addEventListener('change', function 
                     </div>
                     `;
             });
+
+            document.getElementById('processedAutomatically').addEventListener('change', airRefundDataInput);
         };
 
         function flightNDCSectionQuestionNo() {
-            const airSupplierSection = document.getElementById('airSupplierSection');
-
-            airSupplierSection.innerHTML = '';
-
             airSupplierSection.innerHTML = `
-            <div >
-                <label class="form-group" for="airSupplier">Was the void or refund processed automatically or processed by the airline?</label>
+            <div>
+                <label class="form-group" for="airSupplier">Select the supplier:</label>
                 <select class="form-control" id="airSupplier" required>
                     <option value="" selected disabled>Please Select</option>
                     <option value="BSP">BSP - Issued in our office ID</option>
                     <option value="eGlobal">eGlobal</option>
+                    <option value="Mainstreet">Mainstreet</option>
+                    <option value="Brightsun">Brightsun</option>
+                    <option value="Fare Mine">Fare Mine</option>
+                    <option value="Travelfusion">Travelfusion</option>
+                    <option value="Airlines website">Airlines website</option>
                 </select>
             </div>`;
+
+            document.getElementById('airSupplier').addEventListener('change', airRefundDataInput);
         };
 
+
+        function airRefundDataInput() {
+            airRefundData.innerHTML = `
+            <div id="airRefundDataDiv">
+            <label class="form-group" for="airSupplierRef">Supplier Reference</label>
+            <input class="form-control" type="text" id="airSupplierRef"
+                placeholder="Supplier Reference." required>
+
+            <label class="form-group" for="airTicketNo">Ticket number/s</label>
+            <input class="form-control" type="text" id="airTicketNo"
+                placeholder="Enter all the ticket number which require refunding." required>
+
+            <label class="form-group" for="localCurrenyRefundAmount">Local currency refund
+                amount:</label>
+            <input class="form-control" type="text" id="localCurrenyRefundAmount"
+                placeholder="Enter if known.">
+
+            <label class="form-group" for="refundAmountGBP">Refund amount due to EA in GBP</label>
+            <input class="form-control" type="text" id="refundAmountGBP"
+                placeholder="Enter the amount we will be receving in GBP." required>
+
+            <label class="form-group" for="refundBackToClient">Is the refund going back to the
+                client?</label>
+            <select class="form-control" id="refundBackToClient" required>
+                <option value="" selected disabled>Please Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label class="form-group" for="markUpBackToClient">Does your markup need to be refunded?</label>
+            <select class="form-control" id="markUpBackToClient" required>
+                <option value="" selected disabled>Please Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label class="form-group" for="airNeedToKnow">Is there anything else we need to know?</label>
+            <textarea class="form-control" name="airNeedToKnow" id="airNeedToKnow" cols="80" rows="10" placeholder="Waiver codes, details of the flight which has been cancelled by the airlines for which you need a refund, or the amount you want to keep but are still giving your client something back"></textarea>
+        </div>
+        <div>
+                            <input type="submit" value="Submit">
+                        </div>`;
+        };
 
 
 
