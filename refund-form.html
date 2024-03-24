@@ -36,33 +36,43 @@
     <section class="refund-form-section">
         <div class="container-fluid bg-color-purple">
             <div class="row refund-form justify-content-center">
-                <div class="col-6">
+                <div class="col-5">
                     <form id="refundForm">
-                        <div class="pt-3">
+                        <div class="pt-4">
                             <label class="form-group" for="consultFirstName">Consultant's First Name: </label>
                             <input class="form-control" type="text" id="consultFirstName" placeholder="First Name"
                                 required>
                         </div>
-                        <div class="pt-2">
+                        <div class="pt-3">
                             <label class="form-group" for="consultSurname">Consultant's Surname: </label>
                             <input class="form-control" type="text" id="consultSurname" placeholder="Last Name"
                                 required>
                         </div>
-                        <div class="pt-2">
+                        <div class="pt-3">
                             <label class="form-group" for="consultantEmail">Consultant Email: </label>
                             <input class="form-control" type="email" id="consultantEmail"
                                 placeholder="Your email address" required>
                         </div>
-                        <div class="pt-2">
-                            <label class="form-group" for="travellerName">Name of Traveller: </label>
-                            <input class="form-control" type="text" id="travellerName" placeholder="Name of Traveller"
-                                required>
-                        </div>
-                        <div class="pt-2">
+                        <div class="pt-3">
                             <label class="form-group" for="dateOfTravel">Date of Travel: </label>
                             <input class="form-control" type="date" id="dateOfTravel" required>
                         </div>
-                        <div class="pt-2">
+                        <div class="pt-3">
+                            <label class="form-group" for="numberOfPeopleRefund">How many travellers need to be refunded?</label>
+                            <select class="form-control" id="numberOfPeopleRefund" required>
+                                <option value="" selected disabled>Please Select</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div class="pt-3">
                             <label class="form-group" for="travelTypeRefund">Select Travel Type Refund: </label>
                             <select class="form-control" id="travelTypeRefund" required>
                                 <option value="" selected disabled>Please Select</option>
@@ -83,6 +93,7 @@
                         <div id="ndcSupplierRefSection"></div>
                         <div id="airSupplierSection"></div>
                         <div id="airSupplierRef"></div>
+                        <div id="ticketNumberSections"></div>
                         <div id="airRefundData"></div>
                         <div id="refundDomOrIntRail"></div>
                         <div id="railRefundType"></div>
